@@ -1,2 +1,4 @@
 # ScoutingApp
-FRC 2473 Scouting Application
+FRC Scouting Application
+
+Built with Flutter for iOS/Android

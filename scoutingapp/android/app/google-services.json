@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "163283511071",
+    "project_id": "frcscout-2bb26",
+    "storage_bucket": "frcscout-2bb26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163283511071:android:78a6eb9819a6dee11a322a",
+        "android_client_info": {
+          "package_name": "com.example.scoutingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163283511071-4m0gnltt0qc57htsiq9q177omi5cnm8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa6JRKxXq_cIo3QW60D5BD0bRyfbm3y9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163283511071-4m0gnltt0qc57htsiq9q177omi5cnm8u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "163283511071-sq7orblgdca0sobjufnagms5hca4nli0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.scoutingapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
