@@ -6,7 +6,6 @@ class PitScout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CupertinoPageScaffold(
-        backgroundColor: CupertinoColors.systemTeal,
         navigationBar: CupertinoNavigationBar(
           middle: Text("Pit Scout"),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:scoutingapp/screens/pitscout.dart';
 
 import 'matchscout.dart';
 
@@ -15,28 +16,29 @@ class MenuPage extends StatelessWidget {
         MediaQuery.of(context).size.width - padding.left - padding.right;
 
     return CupertinoPageScaffold(
-        backgroundColor: CupertinoColors.systemTeal,
-        navigationBar: const CupertinoNavigationBar(),
+        navigationBar: const CupertinoNavigationBar(
+          middle: Text('Main Menu'),
+        ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               // SizedBox(height: (h1 / 48)),
-              const Center(
-                child: Text(
-                  'Main Menu',
-                  style: TextStyle(
-                      fontFamily: 'Jockey One',
-                      fontSize: 80,
-                      color: Colors.black),
-                ),
-              ),
+              // const Center(
+              //   child: Text(
+              //     'Main Menu',
+              //     style: TextStyle(
+              //         fontFamily: 'Jockey One',
+              //         fontSize: 80,
+              //         color: Colors.black),
+              //   ),
+              // ),
               Center(
                   child: CupertinoButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const MenuPage()),
+                    MaterialPageRoute(builder: (context) => const MatchScout()),
                   );
                 },
                 color: Colors.black,
@@ -53,7 +55,7 @@ class MenuPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const MenuPage()),
+                    MaterialPageRoute(builder: (context) => const PitScout()),
                   );
                 },
                 color: Colors.black,
