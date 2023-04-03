@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13f28757-4463-47b4-aa9c-211f3cc00b85" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FRCScout.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FRCScout.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/1323_1_Rohan.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/1323_65_Rohan.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/2473_15_Me.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/2473_15_Rom.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoutingapp/assets/images/field.png" beforeDir="false" afterPath="$PROJECT_DIR$/scoutingapp/assets/images/field.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoutingapp/lib/screens/homepage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scoutingapp/lib/screens/homepage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoutingapp/lib/screens/matchscout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scoutingapp/lib/screens/matchscout.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoutingapp/lib/screens/matchscoutdata.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scoutingapp/lib/screens/matchscoutdata.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoutingapp/lib/screens/menupage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/scoutingapp/lib/screens/menupage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoutingapp/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/scoutingapp/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Ntb0prLjgPjBGfCyL6xJyzJG16" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13f28757-4463-47b4-aa9c-211f3cc00b85" name="Changes" comment="" />
+      <created>1680486107000</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680486107000</updated>
+    </task>
+    <servers />
+  </component>
+</project>

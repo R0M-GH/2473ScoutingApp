@@ -8,17 +8,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var padding = MediaQuery.of(context).padding;
-    double h1 =
-        MediaQuery.of(context).size.height - padding.top - padding.bottom;
-    double w1 =
-        MediaQuery.of(context).size.width - padding.left - padding.right;
-
     return CupertinoPageScaffold(
         child: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
           const Center(
             child: Text(
               'FRCScout',
@@ -29,7 +26,7 @@ class HomePage extends StatelessWidget {
           Center(
             child: Image.asset(
               'assets/images/chargedup.png',
-              width: 300,
+              width: 250,
             ),
           ),
           Center(
@@ -51,7 +48,7 @@ class HomePage extends StatelessWidget {
           )),
           const Center(
               child: Text(
-            'Dev: R0M-GH\nVersion: Beta V 2023.0.1.3',
+            'Dev: R0M-GH\nVersion: Beta V 2023.0.3',
             style: TextStyle(
                 fontFamily: 'Jockey One', fontSize: 20, color: Colors.black),
             textAlign: TextAlign.center,

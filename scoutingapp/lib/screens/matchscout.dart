@@ -1,13 +1,11 @@
 // ignore_for_file: use_build_context_synchronously, library_private_types_in_public_api
 
-import 'dart:async';
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:flutter/services.dart';
 import 'package:scoutingapp/screens/matchscoutdata.dart';
+
+import '../fileio.dart';
 
 class MatchScout extends StatefulWidget {
   const MatchScout({Key? key}) : super(key: key);
@@ -29,35 +27,6 @@ class _MatchScoutState extends State<MatchScout> {
 
   final _allianceColors = ['Red', 'Blue'];
 
-  Future<void> _saveData() async {
-    final filename =
-        '${_teamNumberController.text}_${_matchNumberController.text}_${_scoutNameController.text}.json';
-
-    final data = {
-      'scoutName': _scoutNameController.text,
-      'teamNumber': _teamNumberController.text,
-      'matchNumber': _matchNumberController.text,
-      'allianceColor': _allianceColor,
-      'allianceStation': _allianceStation,
-      'startingPosition': _startingPosition,
-    };
-
-    final file = await _localFile(filename);
-    await file.writeAsString(jsonEncode(data));
-  }
-
-  Future<File> _localFile(String filename) async {
-    // final path = await _localPath;
-    const path = "C:\\Users\\rohan\\Github\\FRCScout\\data";
-
-    return File('$path/$filename.txt');
-  }
-
-  Future<String> get _localPath async {
-    final directory = await getApplicationDocumentsDirectory();
-    return directory.path;
-  }
-
   @override
   void dispose() {
     _scoutNameController.dispose();
@@ -69,6 +38,7 @@ class _MatchScoutState extends State<MatchScout> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
+      resizeToAvoidBottomInset: false,
       navigationBar: const CupertinoNavigationBar(
         middle: Text('Match Scout'),
       ),
@@ -77,7 +47,7 @@ class _MatchScoutState extends State<MatchScout> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.width * 0.05,
+              height: MediaQuery.of(context).size.height * 0.07,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.85,
@@ -98,6 +68,10 @@ class _MatchScoutState extends State<MatchScout> {
                   width: MediaQuery.of(context).size.width * 0.4,
                   child: CupertinoTextField(
                     controller: _teamNumberController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.digitsOnly,
+                    ],
                     placeholder: 'Team #',
                     textAlign: TextAlign.center,
                     style: const TextStyle(
@@ -110,6 +84,10 @@ class _MatchScoutState extends State<MatchScout> {
                   width: MediaQuery.of(context).size.width * 0.4,
                   child: CupertinoTextField(
                     controller: _matchNumberController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.digitsOnly,
+                    ],
                     placeholder: 'Match #',
                     textAlign: TextAlign.center,
                     style: const TextStyle(
@@ -245,7 +223,7 @@ class _MatchScoutState extends State<MatchScout> {
                     builder: (BuildContext context) {
                       return CupertinoActionSheet(
                         title: const Text('Select Starting Position'),
-                        actions: List<Widget>.generate(8, (int index) {
+                        actions: List<Widget>.generate(6, (int index) {
                           return CupertinoActionSheetAction(
                             onPressed: () {
                               setState(() {
@@ -298,34 +276,35 @@ class _MatchScoutState extends State<MatchScout> {
                   if (_scoutNameController.text.isNotEmpty &&
                       _teamNumberController.text.isNotEmpty &&
                       _matchNumberController.text.isNotEmpty) {
-                    _saveData();
+                    FileIO file = FileIO(_teamNumberController.text,
+                        _matchNumberController.text, _scoutNameController.text);
+                    file.update(FileIO.startingPosition, _startingPosition);
+                    file.update(FileIO.allianceColor, _allianceColor);
+                    file.update(FileIO.allianceStation, _allianceStation);
+                    dispose();
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => MatchData(
-                                teamNumber: _teamNumberController.text,
-                                matchNumber: _matchNumberController.text,
-                                scoutName: _scoutNameController.text,
+                                file: file,
                               )),
                     );
                   } else {
-                    showDialog(
+                    showCupertinoDialog(
                       context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: const Text('Missing Fields'),
-                          content: const Text(
-                              'Please fill out all required fields.'),
-                          actions: <Widget>[
-                            TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              child: const Text('OK'),
-                            ),
-                          ],
-                        );
-                      },
+                      builder: (BuildContext context) => CupertinoAlertDialog(
+                        title: const Text('Missing Fields'),
+                        content:
+                            const Text('Please fill out all required fields.'),
+                        actions: [
+                          CupertinoDialogAction(
+                            child: const Text('OK'),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                        ],
+                      ),
                     );
                   }
                 },

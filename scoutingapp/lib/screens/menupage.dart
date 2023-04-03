@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:scoutingapp/screens/admin.dart';
 import 'package:scoutingapp/screens/pitscout.dart';
 
 import 'matchscout.dart';
@@ -9,12 +10,6 @@ class MenuPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var padding = MediaQuery.of(context).padding;
-    double h1 =
-        MediaQuery.of(context).size.height - padding.top - padding.bottom;
-    double w1 =
-        MediaQuery.of(context).size.width - padding.left - padding.right;
-
     return CupertinoPageScaffold(
         navigationBar: const CupertinoNavigationBar(
           middle: Text('Main Menu'),
@@ -23,16 +18,9 @@ class MenuPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              // SizedBox(height: (h1 / 48)),
-              // const Center(
-              //   child: Text(
-              //     'Main Menu',
-              //     style: TextStyle(
-              //         fontFamily: 'Jockey One',
-              //         fontSize: 80,
-              //         color: Colors.black),
-              //   ),
-              // ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
               Center(
                   child: CupertinoButton(
                 onPressed: () {
@@ -72,7 +60,7 @@ class MenuPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const MenuPage()),
+                    MaterialPageRoute(builder: (context) => const AdminPage()),
                   );
                 },
                 color: Colors.black,
@@ -84,6 +72,9 @@ class MenuPage extends StatelessWidget {
                       color: Color.fromARGB(255, 255, 68, 68)),
                 ),
               )),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
             ],
           ),
         ));
