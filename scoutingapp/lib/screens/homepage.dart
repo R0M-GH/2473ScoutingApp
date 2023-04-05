@@ -11,85 +11,50 @@ class HomePage extends StatelessWidget {
     return CupertinoPageScaffold(
         child: Center(
       child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const SizedBox(height: 50.0),
-            const Center(
-              child: Text(
-                'FRCScout',
-                style: TextStyle(
-                    fontFamily: 'Jockey One',
-                    fontSize: 80,
-                    color: Colors.black),
-              ),
-            ),
-            const SizedBox(height: 32.0),
-            Center(
-              child: Image.asset(
-                'assets/images/chargedup.png',
-                width: 300,
-              ),
-            ),
-            const SizedBox(height: 32.0),
-            Center(
-                child: CupertinoButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MenuPage()),
-                );
-              },
-              color: Colors.black,
-              child: const Text(
-                'ENERGIZE',
-                style: TextStyle(
-                    fontFamily: 'Jockey One',
-                    fontSize: 40,
-                    color: Color(0xff93D500)),
-              ),
-            )),
-            const SizedBox(height: 80.0),
-            const Align(
-                alignment: Alignment.bottomCenter,
-                child: Text(
-                  'Dev: R0M-GH\nVersion: Beta V 2023.0.0.1',
-                  style: TextStyle(
-                      fontFamily: 'Jockey One',
-                      fontSize: 20,
-                      color: Colors.black),
-                  textAlign: TextAlign.center,
-                )),
-            Center(
-              child: Image.asset(
-                'assets/images/chargedup.png',
-                width: 300,
-              ),
-            ),
-            Center(
-                child: CupertinoButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MenuPage()),
-                );
-              },
-              color: Colors.black,
-              child: const Text(
-                'ENERGIZE',
-                style: TextStyle(
-                    fontFamily: 'Jockey One',
-                    fontSize: 40,
-                    color: Color(0xff93D500)),
-              ),
-            )),
-            const Center(
-                child: Text(
-              'Dev: R0M-GH\nVersion: Beta V 2023.0.1.3',
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+          const Center(
+            child: Text(
+              'FRCScout',
               style: TextStyle(
-                  fontFamily: 'Jockey One', fontSize: 20, color: Colors.black),
-              textAlign: TextAlign.center,
-            )),
-          ]),
+                  fontFamily: 'Jockey One', fontSize: 80, color: Colors.black),
+            ),
+          ),
+          Center(
+            child: Image.asset(
+              'assets/images/chargedup.png',
+              width: 250,
+            ),
+          ),
+          Center(
+              child: CupertinoButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MenuPage()),
+              );
+            },
+            color: Colors.black,
+            child: const Text(
+              'ENERGIZE',
+              style: TextStyle(
+                  fontFamily: 'Jockey One',
+                  fontSize: 40,
+                  color: Color(0xff93D500)),
+            ),
+          )),
+          const Center(
+              child: Text(
+            'Dev: R0M-GH\nVersion: Beta V 2023.0.3',
+            style: TextStyle(
+                fontFamily: 'Jockey One', fontSize: 20, color: Colors.black),
+            textAlign: TextAlign.center,
+          )),
+        ],
+      ),
     ));
   }
 }
