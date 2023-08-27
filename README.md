@@ -1,6 +1,7 @@
 # ScoutingApp
 FRC 2473 Scouting Application
 XCode iOS app
+<br><br>
 
 Launch Screen:
 <br>
