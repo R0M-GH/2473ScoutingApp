@@ -1,26 +1,25 @@
-# ScoutingApp
-FRC 2473 Scouting Application
-XCode iOS app
-<br><br>
+# FRCScoutApp
+FRC 2473 Scouting App
 
-Launch Screen:
+FRC 2473 Scouting App built with Swift for iOS. 
+
 <br>
-<img width="372" alt="Launch Screen" src="https://github.com/R0M-GH/FRCScout/assets/104335810/174f3cb8-1f10-485c-ada6-cdd0d418c223">
-<br><br>
-Main Menu:
+
+<b>Storyboard layout:</b>
 <br>
-<img width="380" alt="Main Menu" src="https://github.com/R0M-GH/FRCScout/assets/104335810/ef90a0c2-cef2-4488-ac6f-87be9efc49aa">
-<br><br>
-Mach Scout Login:
+<img width="450" alt="Screenshot 2023-09-11 at 11 41 23 PM" src="https://github.com/AraavNayak/FRCScoutApp/assets/104335810/5b94944b-40c5-432d-be15-bd4d6559c19a">
 <br>
-<img width="389" alt="Match Scout Login" src="https://github.com/R0M-GH/FRCScout/assets/104335810/f06fc53b-cd74-41f0-84ac-4fd71ded2e2a">
-<br><br>
-Autonomous
 <br>
-<img width="369" alt="Autonomous" src="https://github.com/R0M-GH/FRCScout/assets/104335810/88aa0f1f-e1d6-4894-9c84-f8f36dd420b0">
-<br><br>
-Teleop
+<b>Individual screens:</b>
 <br>
-<img width="376" alt="Teleoperated" src="https://github.com/R0M-GH/FRCScout/assets/104335810/a95448fb-52a8-4d7d-ac3a-4beb34246613">
-<br><br>
+<img width="30%" height="30%" alt="Starting screen" src="https://github.com/AraavNayak/FRCScoutApp/assets/104335810/8b65d76d-fa49-4e52-b9db-c96ca485d918">
+<img width="30%" height="30%" alt="Screenshot 2023-05-13 at 2 01 17 PM" src="https://github.com/AraavNayak/FRCScoutApp/assets/104335810/5371fa29-4dc2-4065-b71b-805aa3ac4667">
+<img width="30%" height="30%" alt="Screenshot 2023-05-13 at 2 01 17 PM" src="https://github.com/AraavNayak/FRCScoutApp/assets/104335810/64a8df1e-0cb3-4e6e-a65d-900ecc26c041">
+<img width="30%" height="30%" alt="Screenshot 2023-05-13 at 2 01 17 PM" src="https://github.com/AraavNayak/FRCScoutApp/assets/104335810/6d1d46cc-fa97-4513-90ae-979bc49dfba0">
+<img width="30%" height="30%" alt="Screenshot 2023-05-13 at 2 01 17 PM" src="https://github.com/AraavNayak/FRCScoutApp/assets/104335810/4a0fa342-369e-4d63-8e76-d69bd50f195e">
+<img width="30%" height="30%" alt="Screenshot 2023-05-13 at 2 01 17 PM" src="https://github.com/AraavNayak/FRCScoutApp/assets/104335810/2900575c-e9a9-4b26-9f2a-20fcf5da96b5">
+<img width="30%" height="30%" alt="Screenshot 2023-05-13 at 2 01 17 PM" src="https://github.com/AraavNayak/FRCScoutApp/assets/104335810/46546156-8816-4ba8-b7e0-49e2bb1d8495">
+
+
+
 
