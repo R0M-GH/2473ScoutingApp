@@ -1,6 +1,7 @@
 # FRCScoutApp
 
 FRC 2473 Scouting App built with Swift for iOS complete with Firebase integration for real-time data storage. 
+FirebaseDB: https://console.firebase.google.com/project/frc-scouting-app-db01e/overview
 
 <br>
 
